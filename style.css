@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    font-family: "Karla", sans-serif;
+    background-color:hsl(0, 100%, 74%);
+    /*background-image: url(images/bg-intro-desktop.png);*/
+    color: white;
+}
+
+@media screen and (min-width: 300px){
+    body {
+        background-image: url(images/bg-intro-mobile.png);
+    }
+
+    h1 {
+        margin: 10%;
+    }
+
+    p {
+        margin: 2% 5%;
+        line-height: 1.5em;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .promotion {
+        width: 90%;
+        height: 15vh;
+        background-color: hsl(248, 32%, 49%);
+        margin: auto;
+        /* to center one line of text vertical inside a div, set
+        a line-height in the containing element to a value larger than font size of 
+        the text that you want to center vertically. NOTE >> this works
+        for one line of text only
+        */
+        line-height: 72px;
+        border-radius: 10px;
+    }
+}
