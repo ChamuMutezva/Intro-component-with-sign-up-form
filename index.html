@@ -34,28 +34,32 @@
     </p>
     <div class="promotion">
       <a href="#">Try it free 7 days then &dollar;20/mo. thereafter</a>
-      
+
     </div>
   </header>
+  <main>
+    <form method="GET">
+      <!--<label for="firstName">First Name</label>-->
+      <input type="text" class="details" id="firstName" autocomplete="cc-given-name" placeholder="First Name" />
 
-  <form method="GET">
-    <label for="firstName">First Name</label>
-   <input type="text" id="firstName"/>
+      <!--<label for="lastName">Last Name</label>-->
+      <input type="text" class="details" id="lastName" autocomplete="cc-family-name" placeholder="Last Name" />
 
-    <label for="lastName">Last Name</label>
-   <input type="text" id="lastName"/>
+      <!--<label for="emailDetails">Email Address</label>-->
+      <input type="email" class="details" id="emailDetails" autocomplete="email" placeholder="Email Address" />
 
-    <label for="emailDetails">Email Address</label> 
-<input type="email" id="emailDetails"/>
+      <!--<label for="pass">Password</label>-->
+      <input type="password" class="details" id="pass" autocomplete="current-password" placeholder="Password" />
 
-    <label for="pass">Password</label>
-   <input type="password" id="pass" />
+      <input type="button" class="details" value="Claim your free trial">
 
-    Claim your free trial
+      <p>
+        By clicking the button, you are agreeing to our <span>Terms and Services</span> 
+      </p>
 
-    By clicking the button, you are agreeing to our Terms and Services
-  </form>
-
+     
+    </form>
+  </main>
 
 
 
