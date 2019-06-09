@@ -7,7 +7,8 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+ 
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,6 +25,7 @@
 </head>
 
 <body>
+  <div class="page_wrapper">
   <header>
     <h1>
       Learn to code by watching others
@@ -32,24 +34,26 @@
       See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
       but understanding how developers think is invaluable.
     </p>
-    <div class="promotion">
-      <a href="#">Try it free 7 days then &dollar;20/mo. thereafter</a>
-
-    </div>
+    
   </header>
+
   <main>
+    <div class="promotion">
+      <p><span>Try it free 7 days</span> then &dollar;20/mo. thereafter</p>
+    
+    </div>
     <form method="GET">
       <!--<label for="firstName">First Name</label>-->
-      <input type="text" class="details" id="firstName" autocomplete="cc-given-name" placeholder="First Name" />
+      <input type="text" class="details" id="firstName" autocomplete="cc-given-name" placeholder="First Name" required/>
 
       <!--<label for="lastName">Last Name</label>-->
-      <input type="text" class="details" id="lastName" autocomplete="cc-family-name" placeholder="Last Name" />
+      <input type="text" class="details" id="lastName" autocomplete="cc-family-name" placeholder="Last Name" required />
 
       <!--<label for="emailDetails">Email Address</label>-->
-      <input type="email" class="details" id="emailDetails" autocomplete="email" placeholder="Email Address" />
+      <input type="email" class="details" id="emailDetails" autocomplete="email" placeholder="Email Address" required/>
 
       <!--<label for="pass">Password</label>-->
-      <input type="password" class="details" id="pass" autocomplete="current-password" placeholder="Password" />
+      <input type="password" class="details" id="pass" autocomplete="current-password" placeholder="Password" required/>
 
       <input type="button" class="details" value="Claim your free trial">
 
@@ -59,21 +63,9 @@
 
      
     </form>
-  </main>
-
-
-
-
-
-
-
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  </main>  
+  
+  </div>
 </body>
 
 </html>

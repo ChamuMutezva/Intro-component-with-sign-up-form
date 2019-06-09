@@ -6,7 +6,7 @@
 
 body {
     text-align: center;
-    font-family: "Karla", sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: hsl(0, 100%, 74%);
     /*background-image: url(images/bg-intro-desktop.png);*/
     color: white;
@@ -30,18 +30,24 @@ span {
     }
 
     h1 {
-        margin: 10%;
+        margin: 15% 10% 5% 10%;
+        font-size: x-large;
     }
 
     p {
-        margin: 2% 5%;
+        margin: 2% 10%;
         line-height: 1.5em;
+        font-size: small;
     }
 
-    a {
-        text-decoration: none;
+    .promotion p {        
+        color: white; 
+         margin: 2% 20%;
+    }
+
+    .promotion p span {
         color: white;
-        margin: 5% 10%;
+        font-weight: 600;
     }
 
     .promotion {
@@ -63,7 +69,7 @@ span {
     input.details {
         width: 80%;
         margin: auto;
-        height: 8vh;
+        height: 10vh;
         border-radius: 5px;
         padding-left: 5%;
     }
@@ -78,10 +84,43 @@ span {
     }
 
     form p {
+        font-size: x-small;
         color: black;
     }
     input.details[type = "button"] {
+        font-size: x-small;
+        text-transform: uppercase;
         background-color: hsl(154, 59%, 51%);
         color: white;
+    }
+}
+
+@media screen and (min-width: 400px) {
+   .promotion {
+       width: 75%;
+       margin-bottom: 5%;
+   }
+}
+
+@media screen and (min-width: 600px) {
+    form {
+        width: 75%;       
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .page_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    input.details {
+        width: 90%;      
+        height: 7vh;        
+    }
+
+    form {
+         row-gap: 1%;        
     }
 }
