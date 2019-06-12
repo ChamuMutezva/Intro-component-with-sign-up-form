@@ -42,18 +42,26 @@ form>label {
 }
 
 label {
-    font-size: x-small;
-    /*position: absolute;*/
-    left: 40px;
-    top: 45px;
-    color: black;
-    opacity: 0;
+    font-size: xx-small;
+    position: absolute;
+    left: 65%;
+    top: 100%;
+    color: red;
+    opacity: 1;
 }
+
+/*input[type="text"]:not(:focus):valid{
+ border: 1px solid red;
+}*/
 
 
 @media screen and (min-width: 300px) {
     body {
         background-image: url(images/bg-intro-mobile.png);
+    }
+
+    label {
+        left: 40%;
     }
 
     h1 {
@@ -129,6 +137,10 @@ label {
         width: 90%;
         margin-bottom: 5%;
     }
+
+    label {
+        left: 55%;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -144,6 +156,10 @@ label {
 }
 
 @media screen and (min-width: 700px) {
+    label {
+        left: 30%;
+    }
+
     .page_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -165,6 +181,10 @@ label {
     form {
         width: 90%;
         height: 70vh;
+    }
+
+    label {
+        left: 55%;
     }
 
     h1 {
@@ -200,4 +220,10 @@ label {
         text-align: center;
     }
 
+}
+
+@media screen and (min-width: 1100px) {
+    label {
+        left: 65%;
+    }
 }
