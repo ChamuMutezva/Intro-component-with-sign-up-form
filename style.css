@@ -7,8 +7,7 @@
 body {
     text-align: center;
     font-family: "Poppins", sans-serif;
-    background-color: hsl(0, 100%, 74%);
-    /*background-image: url(images/bg-intro-desktop.png);*/
+    background-color: hsl(0, 100%, 74%);    
     color: white;
 }
 
@@ -26,7 +25,6 @@ span {
 
 form div {
     position: relative;
-
 }
 
 div {
@@ -46,14 +44,40 @@ label {
     position: absolute;
     left: 65%;
     top: 100%;
-    color: red;
-    opacity: 1;
+   color: red; 
+    opacity: 0;
+}
+/*
+
+input[type="text"]:invalid {
+    background-image: url("images/icon-error.svg");
+    background-repeat: no-repeat;
+     background-position: 90% 10%;
+     border: 1px solid red;
 }
 
-/*input[type="text"]:not(:focus):valid{
- border: 1px solid red;
+input[type="text"]:valid {
+    border: 1px solid black;
+    background-image: none;
+    background-repeat: no-repeat;
+    opacity: 0;
 }*/
+input[type="text"]:not(:focus):valid,
+input[type="email"]:not(:focus):valid,
+input[type="password"]:not(:focus):valid
+{
+ border: 1px solid green;  
+}
 
+
+input[type="text"]:not(:focus):invalid,
+input[type="email"]:not(:focus):invalid,
+input[type="password"]:not(:focus):invalid {
+    background-image: url("images/icon-error.svg");
+     background-repeat: no-repeat;
+     background-position: 90% 10%;
+    border: 1px solid red;
+}
 
 @media screen and (min-width: 300px) {
     body {
@@ -86,7 +110,7 @@ label {
     }
 
     .promotion {
-        width: 90%;
+        width: 100%;
         height: 15vh;
         background-color: hsl(248, 32%, 49%);
         margin: auto;
@@ -107,6 +131,7 @@ label {
         height: 10vh;
         border-radius: 5px;
         padding-left: 5%;
+        font-weight: 900;
     }
 
 
@@ -133,8 +158,7 @@ label {
 }
 
 @media screen and (min-width: 400px) {
-    .promotion {
-        width: 90%;
+    .promotion {       
         margin-bottom: 5%;
     }
 
@@ -209,7 +233,7 @@ label {
     }
 
     .promotion {
-        width: 80%;
+        width: 90%;
         height: 8vh;
         margin-bottom: 2%;
         margin-top: 5%;
