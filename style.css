@@ -62,22 +62,36 @@ input[type="text"]:valid {
     background-repeat: no-repeat;
     opacity: 0;
 }*/
+
 input[type="text"]:not(:focus):valid,
 input[type="email"]:not(:focus):valid,
 input[type="password"]:not(:focus):valid
 {
- border: 1px solid green;  
+ border: 1px solid green; 
+ background-image: none;
 }
 
+/*
+input.valid {
+    border: 1px solid green;
+    background-image: none;
+}*/
 
+input.invalid {   
+    background-image: url("images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 10%;
+   border: 1px solid red;
+   
+}
+
+ /* 
 input[type="text"]:not(:focus):invalid,
 input[type="email"]:not(:focus):invalid,
 input[type="password"]:not(:focus):invalid {
-    background-image: url("images/icon-error.svg");
-     background-repeat: no-repeat;
-     background-position: 90% 10%;
     border: 1px solid red;
 }
+*/
 
 @media screen and (min-width: 300px) {
     body {
