@@ -71,6 +71,10 @@ input[type="password"]:not(:focus):valid
  background-image: none;
 }
 
+a {
+    color: red;
+    text-decoration: none;
+}
 /*
 input.valid {
     border: 1px solid green;
