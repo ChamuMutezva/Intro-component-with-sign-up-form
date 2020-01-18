@@ -14,17 +14,19 @@ inputs.forEach(function (input) {
     // 'input' will fire each time the user types
     input.addEventListener('input', function () {
         if (input.validity.valid) {
-            input.classList.remove(invalidClassName);
+            input.classList.remove(invalidClassName);                  
+
         }
+
     })
 })
 //****************************************************** */
 submit.addEventListener("click", function () {
     //console.log(this);
-    for (let input of inputs) { 
-        
-        if (input !== this) {       
-            
+    for (let input of inputs) {
+
+        if (input !== this) {
+
             console.log(input.value.length);
             if (input.value.length < 1) {
 
@@ -34,24 +36,24 @@ submit.addEventListener("click", function () {
                         if (input.getAttribute("id") === deco.getAttribute("for")) {
                             console.log(deco.getAttribute("for"));
                             deco.style.opacity = 1;
-                           // if (input.value.length < 1) {
-                           input.setCustomValidity(`${input.getAttribute("placeholder")} cannot be empty`);
+                            // if (input.value.length < 1) {
+                            input.setCustomValidity(`${input.getAttribute("placeholder")} cannot be empty`);
                             deco.innerHTML = (`${input.getAttribute("placeholder")} cannot be empty`);
-                           // input.style.border = "1px solid red";
+                            // input.style.border = "1px solid red";
                             //console.log(input.getAttribute("id"));
                         }
-                         
+
                     }
                     deco.style.opacity = 1;
                 }
-                
 
-        // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-               // console.log(input.getAttribute("id"));
-               // console.log(deco.getAttribute("for"));
-               // input.setCustomValidity("error");
+
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                // console.log(input.getAttribute("id"));
+                // console.log(deco.getAttribute("for"));
+                // input.setCustomValidity("error");
             }
-         else {
+            else {
                 for (let deco of decorators) {
                     if (deco.hasAttribute("for")) {
                         if (input.getAttribute("id") === deco.getAttribute("for")) {
@@ -60,17 +62,17 @@ submit.addEventListener("click", function () {
                             // if (input.value.length < 1) {
                             input.setCustomValidity("");
                             deco.innerHTML = ("");
-                            
+
                         }
 
                     }
                     deco.style.opacity = 0;
                 }
-                
-        }
 
-           // input.labels.style.opacity = 0;          
-            
+            }
+
+            // input.labels.style.opacity = 0;          
+
         }
     }
 })
