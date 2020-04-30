@@ -14,11 +14,17 @@ inputs.forEach(function (input) {
     // 'input' will fire each time the user types
     input.addEventListener('input', function () {
         if (input.validity.valid) {
-            input.classList.remove(invalidClassName);                  
+            input.classList.remove(invalidClassName);
 
         }
 
     })
+    //
+    input.addEventListener("blur", function () {
+        input.checkValidity();
+    });
+    //
+
 })
 //****************************************************** */
 submit.addEventListener("click", function () {
@@ -47,11 +53,6 @@ submit.addEventListener("click", function () {
                     deco.style.opacity = 1;
                 }
 
-
-                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                // console.log(input.getAttribute("id"));
-                // console.log(deco.getAttribute("for"));
-                // input.setCustomValidity("error");
             }
             else {
                 for (let deco of decorators) {
@@ -66,7 +67,11 @@ submit.addEventListener("click", function () {
                         }
 
                     }
-                    deco.style.opacity = 0;
+                  //  deco.style.opacity = 0;
+                  inputs.forEach(input => {
+                      inputs.value = "";
+                  })
+                  //
                 }
 
             }

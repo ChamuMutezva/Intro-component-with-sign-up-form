@@ -41,11 +41,13 @@ form>label {
 
 label {
     font-size: xx-small;
-    position: absolute;
+   /* position: absolute;
+    opacity: 0;
+   */
     left: 65%;
     top: 100%;
    color: red; 
-    opacity: 0;
+   
 }
 
 
@@ -75,11 +77,11 @@ a {
     color: red;
     text-decoration: none;
 }
-/*
+
 input.valid {
     border: 1px solid green;
     background-image: none;
-}*/
+}
 
 input.invalid {   
     background-image: url("images/icon-error.svg");
@@ -88,6 +90,7 @@ input.invalid {
    border: 1px solid red;
    
 }
+
 
  /* 
 input[type="text"]:not(:focus):invalid,
