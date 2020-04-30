@@ -73,7 +73,7 @@ input.valid {
     background-image: none;
 }
 
-input.invalid {   
+/*input.invalid*/ .invalidClass {   
     background-image: url("images/icon-error.svg");
     background-repeat: no-repeat;
     background-position: 90% 10%;
