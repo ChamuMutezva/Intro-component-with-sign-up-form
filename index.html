@@ -12,16 +12,7 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  
 </head>
 
 <body>
@@ -42,33 +33,29 @@
         <p><span>Try it free 7 days</span> then &dollar;20/mo. thereafter</p>
       </div>
 
-      <form action="#" method="GET">
-        <div>
-          <label>
+      <form action="#" method="GET" class="form">
+        <div>           
             <input type="text" class="details" id="firstName" autocomplete="cc-given-name" placeholder="First Name"
               minlength="3" name="firstName" required aria-required="true" aria-invalid="true">
-          </label>
+          <small>Name cannot be blank</small>
         </div>
 
-        <div>
-          <label>
+        <div>          
             <input type="text" class="details" id="lastName" autocomplete="cc-family-name" placeholder="Last Name"
               minlength="3" name="lastName" required aria-required="true" aria-invalid="true" />
-          </label>
+          <small>Last name cannot be blank</small>
         </div>
 
-        <div>
-          <label>
+        <div>        
             <input type="email" class="details" id="emailDetails" autocomplete="email" placeholder="Email Address"
               required aria-required="true" aria-invalid="true" name="emailDetails" />
-          </label>
+          <small>Email cannot be blank</small>
         </div>
 
-        <div>
-          <label>
+        <div>          
             <input type="password" class="details" id="pass" autocomplete="current-password" placeholder="Password"
               required aria-required="true" aria-invalid="true" name="pass" />
-          </label>
+          <small>Password cannot be blank</small>
         </div>
         <div>
           <input type="submit" class="details" value="Claim your free trial" id="submitDetails">
