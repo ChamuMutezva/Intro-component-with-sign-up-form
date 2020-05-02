@@ -63,7 +63,7 @@
 
         <div>
           <input type="password" class="details" id="pass" autocomplete="current-password" placeholder="Password"
-            required aria-required="true" aria-invalid="true" name="pass" />
+            required aria-required="true" aria-invalid="true" name="pass"/>
           <label for="pass"></label>
         </div>
         <div>
@@ -78,15 +78,6 @@
 
   </div>
   <script src="main.js"></script>
-  <script>
-    // Check that service workers are supported
-    if ('serviceWorker' in navigator) {
-      // Use the window load event to keep the page load performant
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
 </body>
 
 </html>
