@@ -40,12 +40,11 @@ form>label {
 }
 
 label {
-    font-size: xx-small;
-    position: absolute;
+    font-size: xx-small;  
     left: 65%;
     top: 100%;
-   color: red; 
-    opacity: 0;
+   color: transparent; 
+   
 }
 
 
@@ -55,13 +54,6 @@ input[type="password"]:focus {
     height: 7vh;
     box-shadow: 5px 1px 5px 5px#888888;
 }
-/*
-input[type="text"]:valid {
-    border: 1px solid black;
-    background-image: none;
-    background-repeat: no-repeat;
-    opacity: 0;
-}*/
 
 input[type="text"]:not(:focus):valid,
 input[type="email"]:not(:focus):valid,
@@ -75,18 +67,26 @@ a {
     color: red;
     text-decoration: none;
 }
-/*
+
 input.valid {
     border: 1px solid green;
     background-image: none;
-}*/
+}
 
-input.invalid {   
+/*input.invalid*/ .invalidClass {   
     background-image: url("images/icon-error.svg");
     background-repeat: no-repeat;
     background-position: 90% 10%;
-   border: 1px solid red;
-   
+   border: 1px solid red;   
+}
+
+small {
+    position: absolute;    
+    color: red;    
+    text-align: right;
+    width: 100%;
+    left: 0px;
+    top: 54px;
 }
 
  /* 
