@@ -1,18 +1,27 @@
 let submit = document.getElementById("submitDetails");
 console.log(submit.value);
-let inputs = Array.from(document.querySelectorAll(".details"));
+let inputs = Array.from(document.querySelectorAll(".inputs"));
 let decorators = Array.from(document.querySelectorAll("label"));
 const form = document.querySelector(".form");
 console.log(form)
 
-form.addEventListener("submit", (event)=> {
-    event.preventDefault();
-    console.log("Form action");
-    console.log(event);
+form.addEventListener("submit", (event)=> { 
+    event.preventDefault();  
+   // console.log("Form action");
+    //console.log(event);
     inputs.forEach(input => {
+        console.log(input);
         if (input.value == "") {
-            input.nextElementSibling.classList.add("errorDisplay");
+          //  console.log(input)
+         //  input.setCustomValidity("First Name can not be blank")
+           input.nextElementSibling.classList.add("errorDisplay");
+           input.nextElementSibling.innerHTML = `${input.name} cannot be empty`;          
+        } else {
+          // input.setCustomValidity("")
+            input.nextElementSibling.classList.remove("errorDisplay");
+            input.nextElementSibling.innerHTML = "";        
         }
+       
     })
    
     

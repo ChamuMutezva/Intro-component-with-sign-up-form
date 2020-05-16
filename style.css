@@ -68,10 +68,16 @@ a {
     text-decoration: none;
 }
 
-input.valid {
+/*input.valid {
     border: 1px solid green;
     background-image: none;
-}
+}*/
+input.dirty:not(:focus):invalid {
+    background-color: red;
+  }
+  input.dirty:not(:focus):valid {
+    background-color: green;
+  }
 
 /*input.invalid*/ .invalidClass {   
     background-image: url("images/icon-error.svg");
@@ -92,6 +98,7 @@ small {
 
 .errorDisplay {
     visibility: visible;
+    
 }
 
  /* 
