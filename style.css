@@ -87,6 +87,11 @@ small {
     width: 100%;
     left: 0px;
     top: 54px;
+    visibility: hidden;
+}
+
+.errorDisplay {
+    visibility: visible;
 }
 
  /* 

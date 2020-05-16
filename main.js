@@ -2,9 +2,25 @@ let submit = document.getElementById("submitDetails");
 console.log(submit.value);
 let inputs = Array.from(document.querySelectorAll(".details"));
 let decorators = Array.from(document.querySelectorAll("label"));
+const form = document.querySelector(".form");
+console.log(form)
+
+form.addEventListener("submit", (event)=> {
+    event.preventDefault();
+    console.log("Form action");
+    console.log(event);
+    inputs.forEach(input => {
+        if (input.value == "") {
+            input.nextElementSibling.classList.add("errorDisplay");
+        }
+    })
+   
+    
+})
+
 
 //***************************************** */
-let invalidClassName = "invalid";
+/* let invalidClassName = "invalid";
 inputs.forEach(function (input) {
     // Add a css class on submit when the input is invalid.
     input.addEventListener('invalid', function () {
@@ -18,7 +34,7 @@ inputs.forEach(function (input) {
         }
     })
 })
-//****************************************************** */
+
 submit.addEventListener("click", function () {
     //console.log(this);
     for (let input of inputs) { 
@@ -73,4 +89,4 @@ submit.addEventListener("click", function () {
             
         }
     }
-})
+}) */
