@@ -275,6 +275,12 @@ input[type="password"]:not(:focus):invalid {
         line-height: 1;
     }
 
+    small {        
+        text-align: left;        
+        left: 10px;
+        top: 37px;       
+    }
+
 }
 
 @media screen and (min-width: 1100px) {
