@@ -17,6 +17,7 @@ form {
     margin: 5% 0;
     padding-top: 5%;
     border-radius: 10px;
+    gap: 30px;
 }
 
 span {
@@ -47,6 +48,9 @@ label {
    
 }
 
+input.details {    
+    position: relative;
+}
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -92,7 +96,7 @@ small {
     text-align: right;
     width: 100%;
     left: 0px;
-    top: 54px;
+    top: 60px;
     visibility: hidden;
 }
 
@@ -170,8 +174,8 @@ input[type="password"]:not(:focus):invalid {
     }
 
     form {
-        /*row-gap: 5%;*/
-        height: 90vh;
+        /*row-gap: 5%;
+        height: 90vh; */
     }
 
     form p {
@@ -225,10 +229,6 @@ input[type="password"]:not(:focus):invalid {
         height: 7vh;
     }
 
-    form {
-        row-gap: 1%;
-        height: 80vh;
-    }
 }
 
 @media screen and (min-width: 900px) {
@@ -277,8 +277,8 @@ input[type="password"]:not(:focus):invalid {
 
     small {        
         text-align: left;        
-        left: 10px;
-        top: 37px;       
+        left: 6%;
+        top: 100%;   
     }
 
 }
