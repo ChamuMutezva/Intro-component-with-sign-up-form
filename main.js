@@ -3,30 +3,41 @@ console.log(submit.value);
 let inputs = Array.from(document.querySelectorAll(".inputs"));
 let decorators = Array.from(document.querySelectorAll("label"));
 const form = document.querySelector(".form");
-console.log(form)
+console.log(form);
 
-form.addEventListener("submit", (event)=> { 
-    event.preventDefault();  
-   // console.log("Form action");
-    //console.log(event);
-    inputs.forEach(input => {
-        console.log(input);
-        if (input.value == "") {
-          //  console.log(input)
-         //  input.setCustomValidity("First Name can not be blank")
-           input.nextElementSibling.classList.add("errorDisplay");
-           input.nextElementSibling.innerHTML = `${input.name} cannot be empty`;          
-        } else {
-          // input.setCustomValidity("")
-            input.nextElementSibling.classList.remove("errorDisplay");
-            input.nextElementSibling.innerHTML = "";        
-        }
-       
-    })
-   
+inputs.map((input) => {
+  input.addEventListener("focus", () => {
+    input.classList.add("focus")
+    input.closest("div").classList.add("active")
+  });
+  input.addEventListener("blur", () => {
+    input.classList.remove("focus")
+    if (input.value.trim() === "") {
+        input.closest("div").classList.remove("active")
+    }
     
-})
+  });
+});
 
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // console.log("Form action");
+  //console.log(event);
+  inputs.forEach((input) => {
+    console.log(input);
+
+    if (input.value == "") {
+      //  console.log(input)
+      //  input.setCustomValidity("First Name can not be blank")
+      input.nextElementSibling.classList.add("errorDisplay");
+      input.nextElementSibling.innerHTML = `${input.name} cannot be empty`;
+    } else {
+      // input.setCustomValidity("")
+      input.nextElementSibling.classList.remove("errorDisplay");
+      input.nextElementSibling.innerHTML = "";
+    }
+  });
+});
 
 //***************************************** */
 /* let invalidClassName = "invalid";

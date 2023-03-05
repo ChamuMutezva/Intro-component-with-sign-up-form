@@ -7,15 +7,16 @@
 body {
     text-align: center;
     font-family: "Poppins", sans-serif;
-    background-color: hsl(0, 100%, 74%);    
+    background-color: hsl(0, 100%, 74%);
     color: white;
+    min-height: 100vh;
 }
 
-form {
+.form {
     display: grid;
     background-color: white;
-    margin: 5% 0;
-    padding-top: 5%;
+    margin-block: 2rem;
+    padding-block: 2rem;
     border-radius: 10px;
     gap: 30px;
 }
@@ -33,38 +34,61 @@ div {
     margin: auto;
 }
 
+.inputs {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    padding-block: 0.75rem;
+    font-weight: 900;
+    padding-inline: 2rem;
+}
+
+.input-label {
+    color: black;
+    position: absolute;
+    font-size: 1rem;
+    transform-origin: top left;
+    transform: translate(1rem, 0.5rem) scale(1);
+    transition: all .1s ease-in-out;
+    z-index: 1;
+}
+
+.active label {
+    transform: translate(0, -1.5rem) scale(0.85);
+}
+
+.focus {}
+
 form>label {
-    opacity: 0.3;
+    /* opacity: 0.3;
     position: absolute;
     top: 22px;
-    left: 20px;
+    left: 20px;*/
 }
 
 label {
-    font-size: xx-small;  
+    /*  font-size: xx-small;  
     left: 65%;
     top: 100%;
-   color: transparent; 
-   
+   color: transparent; */
+
 }
 
-input.details {    
+input.details {
     position: relative;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    height: 7vh;
     box-shadow: 5px 1px 5px 5px#888888;
 }
 
 input[type="text"]:not(:focus):valid,
 input[type="email"]:not(:focus):valid,
-input[type="password"]:not(:focus):valid
-{
- border: 1px solid green; 
- background-image: none;
+input[type="password"]:not(:focus):valid {
+    border: 1px solid green;
+    background-image: none;
 }
 
 a {
@@ -78,21 +102,23 @@ a {
 }*/
 input.dirty:not(:focus):invalid {
     background-color: red;
-  }
-  input.dirty:not(:focus):valid {
-    background-color: green;
-  }
+}
 
-/*input.invalid*/ .invalidClass {   
+input.dirty:not(:focus):valid {
+    background-color: green;
+}
+
+/*input.invalid*/
+.invalidClass {
     background-image: url("images/icon-error.svg");
     background-repeat: no-repeat;
     background-position: 90% 10%;
-   border: 1px solid red;   
+    border: 1px solid red;
 }
 
 small {
-    position: absolute;    
-    color: red;    
+    position: absolute;
+    color: red;
     text-align: right;
     width: 100%;
     left: 0px;
@@ -102,10 +128,10 @@ small {
 
 .errorDisplay {
     visibility: visible;
-    
+
 }
 
- /* 
+/* 
 input[type="text"]:not(:focus):invalid,
 input[type="email"]:not(:focus):invalid,
 input[type="password"]:not(:focus):invalid {
@@ -119,7 +145,7 @@ input[type="password"]:not(:focus):invalid {
     }
 
     label {
-        left: 40%;
+        /* left: 40%; */
     }
 
     h1 {
@@ -159,14 +185,7 @@ input[type="password"]:not(:focus):invalid {
         border-radius: 10px;
     }
 
-    input.details {
-        width: 100%;
-        margin: auto;
-        height: 10vh;
-        border-radius: 5px;
-        padding-left: 5%;
-        font-weight: 900;
-    }
+
 
 
     main {
@@ -192,12 +211,12 @@ input[type="password"]:not(:focus):invalid {
 }
 
 @media screen and (min-width: 400px) {
-    .promotion {       
+    .promotion {
         margin-bottom: 5%;
     }
 
     label {
-        left: 55%;
+        /* left: 55%; */
     }
 }
 
@@ -215,7 +234,7 @@ input[type="password"]:not(:focus):invalid {
 
 @media screen and (min-width: 700px) {
     label {
-        left: 30%;
+        /* left: 30%; */
     }
 
     .page_wrapper {
@@ -238,7 +257,7 @@ input[type="password"]:not(:focus):invalid {
     }
 
     label {
-        left: 55%;
+        /*  left: 55%; */
     }
 
     h1 {
@@ -275,16 +294,16 @@ input[type="password"]:not(:focus):invalid {
         line-height: 1;
     }
 
-    small {        
-        text-align: left;        
+    small {
+        text-align: left;
         left: 6%;
-        top: 100%;   
+        top: 100%;
     }
 
 }
 
 @media screen and (min-width: 1100px) {
     label {
-        left: 65%;
+        /*  left: 65%; */
     }
 }
