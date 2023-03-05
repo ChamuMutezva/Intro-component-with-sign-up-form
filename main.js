@@ -7,15 +7,19 @@ console.log(form);
 
 inputs.map((input) => {
   input.addEventListener("focus", () => {
-    input.classList.add("focus")
-    input.closest("div").classList.add("active")
+    input.classList.add("focus");
+    input.closest("div").classList.add("active");
   });
   input.addEventListener("blur", () => {
-    input.classList.remove("focus")
+    input.classList.remove("focus");
     if (input.value.trim() === "") {
-        input.closest("div").classList.remove("active")
+      input.closest("div").classList.remove("active");
+      input.nextElementSibling.classList.add("errorDisplay");
+      input.nextElementSibling.innerHTML = `${input.name} cannot be empty`;
+    } else {
+      input.nextElementSibling.classList.remove("errorDisplay");
+      input.nextElementSibling.innerHTML = "";
     }
-    
   });
 });
 
@@ -26,7 +30,7 @@ form.addEventListener("submit", (event) => {
   inputs.forEach((input) => {
     console.log(input);
 
-    if (input.value == "") {
+    if (input.value === "") {
       //  console.log(input)
       //  input.setCustomValidity("First Name can not be blank")
       input.nextElementSibling.classList.add("errorDisplay");

@@ -12,8 +12,10 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <title>Frontend Mentor | Intro component with sign up form</title>
@@ -22,22 +24,26 @@
   </head>
 
   <body>
-    <div class="page_wrapper">
-      <header>
-        <h1>Learn to code by watching others</h1>
-        <p>
+    <div class="page_wrapper container">
+      <header class="header">
+        <h1 class="title">Learn to code by watching others</h1>
+        <p class="text">
           See how experienced developers solve problems in real-time. Watching
           scripted tutorials is great, but understanding how developers think is
           invaluable.
         </p>
       </header>
 
-      <main>
-        <div class="promotion">
-          <p><span>Try it free 7 days</span> then &dollar;20/mo. thereafter</p>
+      <main class="main">
+        <div class="container promotion">
+          <p class="text promotion-text">
+            <span class="promotion-text-span">Try it free 7 days</span> then
+            &dollar;20/mo. thereafter
+          </p>
         </div>
 
-        <form action="#" method="GET" class="form">
+        <form action="#" method="GET" class="form container">
+          <!--FIRST NAME-->
           <div class="input-container">
             <label for="firstName" class="input-label">First Name</label>
             <input
@@ -45,63 +51,67 @@
               class="details inputs"
               id="firstName"
               autocomplete="cc-given-name"
-              minlength="3"
+              minlength="1"
               name="FirstName"
-              aria-invalid="true"              
+              aria-describedby="firstname-error"
             />
-            <small>First Name cannot be empty</small>
+            <small class="error" id="firstname-error"
+              >First Name cannot be empty
+            </small>
           </div>
 
+          <!--LAST NAME-->
           <div class="input-container">
             <label for="lastName" class="input-label">Last Name</label>
             <input
               type="text"
               class="details inputs"
               id="lastName"
-              autocomplete="cc-family-name"              
-              minlength="3"
+              autocomplete="cc-family-name"
+              minlength="1"
               name="LastName"
-              aria-invalid="true"
+              aria-describedby="lastname-error"
             />
-            <small>Last Name cannot be empty</small>
+            <small class="error" id="lastname-error"
+              >Last Name cannot be empty
+            </small>
           </div>
 
+          <!--EMAIL ADDRESS-->
           <div class="input-container">
             <label for="email" class="input-label">Email Address</label>
             <input
               type="email"
               class="details inputs"
               id="email"
-              autocomplete="email"             
+              autocomplete="email"
               name="Email"
-              aria-invalid="true"
+              aria-describedby="email-error"
             />
-            <small>Email cannot be empty</small>
+            <small class="error" id="email-error">Email cannot be empty</small>
           </div>
 
+          <!--PASSWORD-->
           <div class="input-container">
             <label for="password" class="input-label">Password</label>
             <input
               type="password"
               class="details inputs"
               id="password"
-              autocomplete="current-password"              
+              autocomplete="current-password"
               name="Password"
-              aria-invalid="true"
+              aria-describedby="password-error"
             />
-            <small>Password cannot be empty</small>
+            <small class="error" id="password-error"
+              >Password cannot be empty
+            </small>
           </div>
-
           <div class="input-container">
-            <input
-              type="submit"
-              class="details"
-              value="Claim your free trial"
-              id="submitDetails"
-            />
+            <button type="submit" class="btn-submit" id="submitDetails">
+              Claim your free trial
+            </button>
           </div>
-
-          <p>
+          <p class="form-text">
             By clicking the button, you are agreeing to our
             <a href="">Terms and Services</a>
           </p>
