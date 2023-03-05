@@ -129,6 +129,7 @@ body {
     font-size: 0.875rem;
     font-weight: 600;
     padding-inline: 2rem;
+    border: 1px solid --black;
 }
 
 .input-label {
@@ -170,14 +171,7 @@ input[type="password"]:focus {
     box-shadow: 5px 1px 5px 5px#888888;
 }
 
-input[type="text"]:not(:focus):valid,
-input[type="email"]:not(:focus):valid,
-input[type="password"]:not(:focus):valid {
-    border: 1px solid hsla(0, 0%, 87%, 1);
-    background-image: none;
-}
-
-a {
+.btn-terms {
     color: red;
     text-decoration: none;
 }
@@ -187,14 +181,14 @@ input.dirty:not(:focus):invalid {
 }
 
 input.dirty:not(:focus):valid {
-    background-color: green;
+    background-color: var(--green);
 }
 
 /*input.invalid*/
 .invalidClass {
     background-image: url("images/icon-error.svg");
     background-repeat: no-repeat;
-    background-position: 90% 10%;
+    background-position: 90% 50%;
     border: 1px solid red;
 }
 
@@ -214,14 +208,6 @@ input.dirty:not(:focus):valid {
 
 }
 
-/* 
-input[type="text"]:not(:focus):invalid,
-input[type="email"]:not(:focus):invalid,
-input[type="password"]:not(:focus):invalid {
-    border: 1px solid red;
-}
-*/
-
 .title {
     font-size: 1.75rem;
 }
@@ -235,7 +221,7 @@ input[type="password"]:not(:focus):invalid {
 }
 
 .promotion {
-    background-color: hsl(248, 32%, 49%);
+    background-color: var(--blue);
     border-radius: 10px;
     padding-block: 1rem;
 }
@@ -252,7 +238,7 @@ input[type="password"]:not(:focus):invalid {
 input.details[type="submit"] {
     font-size: x-small;
     text-transform: uppercase;
-    background-color: hsl(154, 59%, 51%);
+    background-color: var(--green);
     color: white;
 }
 
