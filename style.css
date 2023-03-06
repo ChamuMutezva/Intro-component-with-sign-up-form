@@ -253,20 +253,14 @@ input.details[type="submit"] {
         gap: 2rem;
     }
 
-
     .title {
         font-size: 3.125rem;
     }
 
-}
-
-@media screen and (min-width: 900px) {
-
-    .promotion p {
+    .promotion-text {
         margin: 0 auto;
         text-align: center;
         line-height: 1;
     }
-    
 
 }
